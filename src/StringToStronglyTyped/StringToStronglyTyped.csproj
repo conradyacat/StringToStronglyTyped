@@ -4,9 +4,9 @@
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Conrad Yacat</Authors>
-    <Version>0.1.0</Version>
-    <PackageVersion>0.1.0</PackageVersion>
-    <ReleaseVersion>0.1.0</ReleaseVersion>
+    <Version>0.1.1</Version>
+    <PackageVersion>0.1.1</PackageVersion>
+    <ReleaseVersion>0.1.1</ReleaseVersion>
     <PackageId>StringToStronglyTyped</PackageId>
     <Title>StringToStronglyTyped</Title>
     <PackOnBuild>true</PackOnBuild>
@@ -21,6 +21,13 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <DocumentationFile>C:\temp\Scratch\Git\StringToStronglyTyped\src\StringToStronglyTyped\StringToStronglyTyped.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <DocumentationFile>C:\temp\Scratch\Git\StringToStronglyTyped\src\StringToStronglyTyped\StringToStronglyTyped.xml</DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
   </PropertyGroup>

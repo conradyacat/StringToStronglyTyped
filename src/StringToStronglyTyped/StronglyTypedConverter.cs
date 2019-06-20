@@ -26,10 +26,19 @@ using System.Reflection;
 
 namespace StringToStronglyTyped
 {
+    /// <summary>
+    /// Implementation to convert string to a strong-typed object.
+    /// </summary>
     public static class StronglyTypedConverter
     {
         private const char LIST_DELIMITER = '|';
 
+        /// <summary>
+        /// Converts a string value to another type.
+        /// </summary>
+        /// <param name="value">The string value to be converted.</param>
+        /// <param name="toType">The type to which the value will be converted.</param>
+        /// <returns>Returns an instance of the converted value.</returns>
         public static object ToType(string value, Type toType)
         {
             if (toType == typeof(string))
@@ -224,11 +233,23 @@ namespace StringToStronglyTyped
             return value;
         }
 
+        /// <summary>
+        /// Converts a string value to another type.
+        /// </summary>
+        /// <typeparam name="T">The type to which the value will be converted.</typeparam>
+        /// <param name="value">The string value to be converted.</param>
+        /// <returns>Returns an instance of the converted value.</returns>
         public static T ToType<T>(string value)
         {
             return (T)ToType(value, typeof(T));
         }
 
+        /// <summary>
+        /// Converts an <see cref="IDictionary"/> instance to a strongly-typed object.
+        /// </summary>
+        /// <typeparam name="T">The type to which the value will be converted.</typeparam>
+        /// <param name="dictionary">The dictionary instance to be converted.</param>
+        /// <returns>Returns an instance of the converted value.</returns>
         public static T ToType<T>(IDictionary dictionary) where T : class, new()
         {
             var type = typeof(T);
@@ -296,11 +317,23 @@ namespace StringToStronglyTyped
             return t;
         }
 
+        /// <summary>
+        /// Compares two string instances.
+        /// </summary>
+        /// <param name="text1">The first string in the comparison.</param>
+        /// <param name="text2">The second string in the comparison.</param>
+        /// <returns>Returns true if the strings are the equal, otherwise, false.</returns>
         private static bool StringInvariantCultureIgnoreCaseEquals(string text1, string text2)
         {
             return string.Compare(text1, text2, StringComparison.InvariantCultureIgnoreCase) == 0;
         }
 
+        /// <summary>
+        /// Splits a string value.
+        /// </summary>
+        /// <param name="value">The string value to split.</param>
+        /// <param name="delimiter">The delimiter to use to split the string.</param>
+        /// <returns></returns>
         private static string[] Split(string value, char delimiter)
         {
             if (string.IsNullOrWhiteSpace(value))

@@ -22,9 +22,15 @@ using System;
 
 namespace StringToStronglyTyped
 {
+    /// <summary>
+    /// Properties of the Strongly-typed class should be marked with this attribute in order to convert it.
+    /// </summary>
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
     public class StronglyTypedMetadataAttribute : Attribute
     {
+        /// <summary>
+        /// Initializes a new instance of StronglyTypedMetadataAttribute.
+        /// </summary>
         public StronglyTypedMetadataAttribute()
         {
             IsRequired = true;
