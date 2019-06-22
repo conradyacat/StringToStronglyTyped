@@ -6,7 +6,6 @@
     <Authors>Conrad Yacat</Authors>
     <Version>0.1.1</Version>
     <PackageVersion>0.1.1</PackageVersion>
-    <ReleaseVersion>0.1.1</ReleaseVersion>
     <PackageId>StringToStronglyTyped</PackageId>
     <Title>StringToStronglyTyped</Title>
     <PackOnBuild>true</PackOnBuild>
@@ -23,15 +22,21 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
-    <DocumentationFile>C:\temp\Scratch\Git\StringToStronglyTyped\src\StringToStronglyTyped\StringToStronglyTyped.xml</DocumentationFile>
+    <DocumentationFile>.\StringToStronglyTyped.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
-    <DocumentationFile>C:\temp\Scratch\Git\StringToStronglyTyped\src\StringToStronglyTyped\StringToStronglyTyped.xml</DocumentationFile>
+    <DocumentationFile>.\StringToStronglyTyped.xml</DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\LICENSE.md">
       <Pack>True</Pack>
