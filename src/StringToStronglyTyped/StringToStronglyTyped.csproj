@@ -12,7 +12,7 @@
     <Owners>Conrad Yacat</Owners>    
     <PackageProjectUrl>https://github.com/conradyacat/StringToStronglyTyped</PackageProjectUrl>
     <RepositoryUrl>https://github.com/conradyacat/StringToStronglyTyped</RepositoryUrl>
-    <PackageTags>converter convert stronglytyped strongly-typed strongtyped strong-typed</PackageTags>
+    <PackageTags>converter convert stronglytyped strongly-typed strongtyped strong-typed string-converter string</PackageTags>
     <Description>A simple utility to convert string values to strongly-typed objects.</Description>
     <Summary>A simple utility to convert string values to strongly-typed objects.</Summary>
     <Copyright>Copyright (c) 2014 Conrad Yacat</Copyright>
